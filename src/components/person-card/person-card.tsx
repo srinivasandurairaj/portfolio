@@ -1,12 +1,16 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext, useCallback } from "react";
 import NextImage from "next/image";
+import NextLink from "next/link";
 
-import personCardStyles from "./person-card.module.css";
+import styles from "./person-card.module.css";
+import { ProfileContext } from "../provider/profile-provider";
+import { Profile } from "../../utilities/constants";
 import { LinkedInIcon, LocationIcon, CopyIcon } from "../logo";
 
 export const PersonCard = () => {
+  const emailRef = useRef<HTMLParagraphElement>(null);
   const {
     personCardContainer,
     textContainer,
@@ -21,21 +25,29 @@ export const PersonCard = () => {
     handlesContainer,
     handles,
     infoBox,
-  } = personCardStyles;
-  const emailRef = useRef<HTMLParagraphElement>(null);
-  const [copyText, setCopyText] = useState(
-    "mailtosrinivasandurairaj@gmail.com"
-  );
+    linekedInLink,
+  } = styles;
+  const {
+    name,
+    role: professionalTitle,
+    location: baseLocation,
+    workStatus,
+    linkedInProfile,
+    emailAddress,
+  } = useContext(ProfileContext);
+  const [copyText, setCopyText] = useState(emailAddress);
 
-  const timerToUpdateText = () =>
-    setTimeout(() => {
-      setCopyText("mailtosrinivasandurairaj@gmail.com");
-    }, 1000);
+  const timerToUpdateText = useCallback(
+    () =>
+      setTimeout(() => {
+        setCopyText(emailAddress);
+      }, 1000),
+    [emailAddress]
+  );
 
   const copyHandler = () => {
     if (emailRef.current) {
       navigator.clipboard.writeText(emailRef.current.textContent || "");
-      document.execCommand("copy");
       setCopyText("Copied to clipboard!");
       timerToUpdateText();
     }
@@ -46,7 +58,11 @@ export const PersonCard = () => {
     return () => {
       clearTimeout(timerToUpdateText());
     };
-  }, []);
+  }, [timerToUpdateText]);
+
+  useEffect(() => {
+    setCopyText(emailAddress);
+  }, [emailAddress]);
 
   return (
     <div>
@@ -62,19 +78,15 @@ export const PersonCard = () => {
         </div>
         <div className={textContainer}>
           <div className={basicInfo}>
-            <h1 className={`${title} ${noMargin}`}>Srinivasan Durairaj</h1>
-            <h2 className={`${role} ${noMargin}`}>Full-Stack Developer</h2>
+            <h1 className={`${title} ${noMargin}`}>{name}</h1>
+            <h2 className={`${role} ${noMargin}`}>{professionalTitle}</h2>
             <div className={locationContainer}>
               <LocationIcon />
-              <p className={`${location} ${noMargin}`}>
-                London, United Kingdom
-              </p>
+              <p className={`${location} ${noMargin}`}>{baseLocation}</p>
             </div>
           </div>
           <div>
-            <p className={`${workAvailability} ${noMargin}`}>
-              Available for work
-            </p>
+            <p className={`${workAvailability} ${noMargin}`}>{workStatus}</p>
           </div>
         </div>
       </div>
@@ -83,10 +95,16 @@ export const PersonCard = () => {
           <CopyIcon />
           <p className={`${handles} ${noMargin}`}>{copyText}</p>
         </div>
-        <div className={infoBox}>
-          <LinkedInIcon />
-          <p className={`${handles} ${noMargin}`}>Linked In</p>
-        </div>
+        <NextLink
+          href={linkedInProfile}
+          target="_blank"
+          className={linekedInLink}
+        >
+          <div className={infoBox}>
+            <LinkedInIcon />
+            <p className={`${handles} ${noMargin}`}>{Profile.LINKEDIN}</p>
+          </div>
+        </NextLink>
       </div>
     </div>
   );

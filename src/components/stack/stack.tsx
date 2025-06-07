@@ -1,3 +1,4 @@
+import { Profile } from "@/utilities/constants";
 import { StackIcon } from "../stack-icon/stack-icon";
 
 import styles from "./stack.module.css";
@@ -7,7 +8,7 @@ export const Stack = () => {
 
   return (
     <div className={stackContainer}>
-      <h2 className={stackTitle}>Stack</h2>
+      <h2 className={stackTitle}>{Profile.STACK}</h2>
       <StackIcon />
     </div>
   );

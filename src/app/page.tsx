@@ -1,21 +1,49 @@
-import { AboutMe } from "@/components/about-me/about-me";
-import { Footer } from "@/components/footer/footer";
-import { PersonCard } from "@/components/person-card/person-card";
-import { Stack } from "@/components/stack/stack";
-import { WorkExperience } from "@/components/work-experience/work-experience";
+"use client";
+
+import { useState, useEffect } from "react";
+
+import { AboutMe } from "@/components/about-me";
+import { Certifications } from "@/components/certifications/certifications";
+import { Footer } from "@/components/footer";
+import { initialState } from "@/components/provider/initial-data";
+import { PersonCard } from "@/components/person-card";
+import { ProfileContext } from "@/components/provider/profile-provider";
+import { Stack } from "@/components/stack";
+import { WorkExperience } from "@/components/work-experience";
 
 import styles from "./page.module.css";
 
-export default function Home() {
+const Home = () => {
   const { container } = styles;
+  const [data, setData] = useState(initialState);
+
+  const fetchData = async () => {
+    const res = await fetch("/api/profile", {
+      headers: {
+        Accept: "application/json",
+        method: "GET",
+      },
+    });
+    const data = await res.json();
+    setData(data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
-    <div className={container}>
-      <PersonCard />
-      <AboutMe />
-      <WorkExperience />
-      <Stack />
-      <Footer />
-    </div>
+    <ProfileContext.Provider value={data}>
+      <div className={container}>
+        <PersonCard />
+        <AboutMe />
+        <WorkExperience />
+        <Certifications />
+        <Stack />
+        <Footer />
+      </div>
+    </ProfileContext.Provider>
   );
-}
+};
+
+export default Home;

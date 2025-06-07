@@ -1,4 +1,4 @@
-export const stackData = [
+export const stack = [
   {
     name: "NextJs",
     image: "/nextjs.jpeg",

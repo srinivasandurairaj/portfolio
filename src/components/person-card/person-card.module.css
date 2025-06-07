@@ -98,9 +98,18 @@
   letter-spacing: 1px;
 }
 
+.handles:hover {
+  color: var(--offWhite);
+  transition: all 0.3s ease-in-out;
+}
+
 .infoBox {
   display: flex;
   margin-top: 10px;
+}
+
+.linekedInLink {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {

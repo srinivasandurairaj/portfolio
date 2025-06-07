@@ -1,7 +1,13 @@
 import { LocationIcon } from "../logo";
+import { IBasicProjectInfoProps } from "./basic-project-info.props";
 import styles from "./basic-project-info.module.css";
 
-export const BasicProjectInfo = ({ location, organisation, period, role }) => {
+export const BasicProjectInfo = ({
+  location,
+  organisation,
+  period,
+  role,
+}: IBasicProjectInfoProps) => {
   const {
     location: locationStyles,
     orgainizationBox,

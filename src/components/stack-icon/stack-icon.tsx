@@ -1,6 +1,7 @@
+import { useContext } from "react";
 import NextImage from "next/image";
 
-import { stackData } from "../stack/stack-data";
+import { ProfileContext } from "../provider/profile-provider";
 import styles from "./stack-icon.module.css";
 
 export const StackIcon = () => {
@@ -11,10 +12,11 @@ export const StackIcon = () => {
     stackContainer,
     framework: frameworkStyles,
   } = styles;
+  const { stack } = useContext(ProfileContext);
 
   return (
     <div className={stackContainer}>
-      {stackData.map(({ name, image, alt, framework }) => (
+      {stack.map(({ name, image, alt, framework }) => (
         <div key={name} className={stackBox}>
           <div className={imageContainer}>
             <NextImage src={image} alt={alt} width={40} height={40} />

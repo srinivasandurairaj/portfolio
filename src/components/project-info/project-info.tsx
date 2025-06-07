@@ -1,6 +1,9 @@
+import { Profile } from "@/utilities/constants";
+
+import { IProjectInfo } from "./project-info.props";
 import styles from "./project-info.module.css";
 
-export const ProjectInfo = ({ project }) => {
+export const ProjectInfo = ({ project }: IProjectInfo) => {
   const {
     projectInfoContiner,
     projectTitle: projectTitleStyles,
@@ -16,7 +19,9 @@ export const ProjectInfo = ({ project }) => {
             <p className={projectTitleStyles}>{projectTitle}</p>
             <p className={projectDescriptionStyles}>{projectDescription}</p>
             {responsiblites.length > 0 && (
-              <p className={responsiblityTitle}>Key responsibilities</p>
+              <p className={responsiblityTitle}>
+                {Profile.KEY_RESPONSIBILITIES}
+              </p>
             )}
             {responsiblites.map((responsiblity) => (
               <div key={responsiblity}>
