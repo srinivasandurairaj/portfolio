@@ -1,0 +1,11 @@
+.footerContainer {
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footerText {
+  font-weight: 100;
+  color: var(--offWhite);
+}

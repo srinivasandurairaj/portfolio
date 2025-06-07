@@ -1,7 +1,8 @@
-import { PersonCard } from "@/components/person-card/person-card";
 import { AboutMe } from "@/components/about-me/about-me";
-import { WorkExperience } from "@/components/work-experience/work-experience";
+import { Footer } from "@/components/footer/footer";
+import { PersonCard } from "@/components/person-card/person-card";
 import { Stack } from "@/components/stack/stack";
+import { WorkExperience } from "@/components/work-experience/work-experience";
 
 import styles from "./page.module.css";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutMe />
       <WorkExperience />
       <Stack />
+      <Footer />
     </div>
   );
 }

@@ -5,4 +5,5 @@
 .stackTitle {
   font-weight: 100;
   color: var(--offWhite);
+  margin-bottom: 20px;
 }

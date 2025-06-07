@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState, useEffect } from "react";
 import NextImage from "next/image";
 
 import personCardStyles from "./person-card.module.css";
@@ -19,6 +22,32 @@ export const PersonCard = () => {
     handles,
     infoBox,
   } = personCardStyles;
+  const emailRef = useRef<HTMLParagraphElement>(null);
+  const [copyText, setCopyText] = useState(
+    "mailtosrinivasandurairaj@gmail.com"
+  );
+
+  const timerToUpdateText = () =>
+    setTimeout(() => {
+      setCopyText("mailtosrinivasandurairaj@gmail.com");
+    }, 1000);
+
+  const copyHandler = () => {
+    if (emailRef.current) {
+      navigator.clipboard.writeText(emailRef.current.textContent || "");
+      document.execCommand("copy");
+      setCopyText("Copied to clipboard!");
+      timerToUpdateText();
+    }
+  };
+
+  // Cleanup function to clear the timeout if the component unmounts
+  useEffect(() => {
+    return () => {
+      clearTimeout(timerToUpdateText());
+    };
+  }, []);
+
   return (
     <div>
       <div className={personCardContainer}>
@@ -50,11 +79,9 @@ export const PersonCard = () => {
         </div>
       </div>
       <div className={handlesContainer}>
-        <div className={infoBox}>
+        <div className={infoBox} ref={emailRef} onClick={copyHandler}>
           <CopyIcon />
-          <p className={`${handles} ${noMargin}`}>
-            mailtosrinivasandurairaj@gmail.com
-          </p>
+          <p className={`${handles} ${noMargin}`}>{copyText}</p>
         </div>
         <div className={infoBox}>
           <LinkedInIcon />

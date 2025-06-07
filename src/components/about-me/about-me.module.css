@@ -7,6 +7,7 @@
   color: var(--offWhite);
   font-weight: 100;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 .aboutMeDesc {

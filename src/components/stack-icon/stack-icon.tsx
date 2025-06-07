@@ -4,17 +4,26 @@ import { stackData } from "../stack/stack-data";
 import styles from "./stack-icon.module.css";
 
 export const StackIcon = () => {
-  const { imageContainer, stackName } = styles;
+  const {
+    imageContainer,
+    stackName,
+    stackBox,
+    stackContainer,
+    framework: frameworkStyles,
+  } = styles;
 
   return (
-    <div>
-      {stackData.map(({ name, image, alt }) => (
-        <>
-          <div key={name} className={imageContainer}>
-            <NextImage src={image} alt={alt} width={30} height={30} />
+    <div className={stackContainer}>
+      {stackData.map(({ name, image, alt, framework }) => (
+        <div key={name} className={stackBox}>
+          <div className={imageContainer}>
+            <NextImage src={image} alt={alt} width={40} height={40} />
           </div>
-          <span className={stackName}>{name}</span>
-        </>
+          <div>
+            <p className={stackName}>{name}</p>
+            <p className={frameworkStyles}>{framework}</p>
+          </div>
+        </div>
       ))}
     </div>
   );

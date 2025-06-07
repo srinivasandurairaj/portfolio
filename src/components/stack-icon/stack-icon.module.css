@@ -8,5 +8,24 @@
 }
 
 .stackName {
+  font-weight: 200;
+  font-size: 18px;
+  margin: 2px 0 0 15px;
   color: var(--offWhite);
+}
+
+.framework {
+  font-weight: 100;
+  color: var(--darkWhite);
+  margin: 8px 0 0 15px;
+}
+
+.stackBox {
+  display: flex;
+}
+
+.stackContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 20px;
 }
