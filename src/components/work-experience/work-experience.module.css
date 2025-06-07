@@ -1,0 +1,9 @@
+.workExperienceContainer {
+  padding: 60px 0;
+}
+
+.workExperienceTitle {
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--offWhite);
+}

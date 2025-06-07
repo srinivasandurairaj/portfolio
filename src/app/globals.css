@@ -1,0 +1,12 @@
+:root {
+  --bodyBackground: #121212;
+  --offWhite: #edebeb;
+  --greyWhite: #c9c9c9;
+  --darkWhite: #8a8a8a;
+  --brightGreen: #3fff0a;
+  --border: #575757;
+}
+
+body {
+  background: var(--bodyBackground);
+}
