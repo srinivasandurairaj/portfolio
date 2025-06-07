@@ -1,0 +1,29 @@
+.location {
+  color: var(--darkWhite);
+  font-weight: 100;
+  margin-left: 5px;
+}
+
+.orgainizationBox {
+  display: flex;
+  justify-content: space-between;
+  color: var(--greyWhite);
+  font-weight: 100;
+}
+
+.role {
+  color: var(--darkWhite);
+  font-weight: 100;
+}
+
+.noMarginBottom {
+}
+@media screen and (max-width: 600px) {
+  .orgainizationBox {
+    flex-direction: column;
+  }
+
+  .noMarginBottom {
+    margin-bottom: 0;
+  }
+}

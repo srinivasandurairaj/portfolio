@@ -1,0 +1,12 @@
+.imageContainer {
+  background: var(--offWhite);
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.stackName {
+  color: var(--offWhite);
+}

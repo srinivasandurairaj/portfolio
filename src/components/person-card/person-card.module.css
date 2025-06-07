@@ -62,13 +62,7 @@
 
 .locationContainer {
   display: flex;
-}
-
-.locationIcon {
-  user-select: none;
-  height: 13px;
-  display: inline-block;
-  flex-shrink: 0;
+  align-items: center;
 }
 
 .workAvailability {
@@ -104,28 +98,35 @@
   letter-spacing: 1px;
 }
 
-.copyIcon {
-  user-select: none;
-  height: 15px;
-  display: inline-block;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.linkedInIcon {
-  user-select: none;
-  display: inline-block;
-  flex-shrink: 0;
-  cursor: pointer;
-  height: 18px;
-}
-
-.iconColor {
-  color: var(--darkWhite);
-  fill: var(--darkWhite);
-}
-
 .infoBox {
   display: flex;
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .basicInfo {
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  .location {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .workAvailability {
+    font-size: 12px;
+  }
+
+  .handlesContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }

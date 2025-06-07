@@ -1,0 +1,33 @@
+.locationIcon {
+  user-select: none;
+  height: 13px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.iconColor {
+  color: var(--darkWhite);
+  fill: var(--darkWhite);
+}
+
+.copyIcon {
+  user-select: none;
+  height: 18px;
+  display: inline-block;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.linkedInIcon {
+  user-select: none;
+  display: inline-block;
+  flex-shrink: 0;
+  cursor: pointer;
+  height: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .locationIcon {
+    height: 12px;
+  }
+}
