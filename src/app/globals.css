@@ -5,6 +5,8 @@
   --darkWhite: #8a8a8a;
   --brightGreen: #3fff0a;
   --border: #575757;
+  --inputBackground: #242424;
+  --inputBorder: #525050;
 }
 
 body {

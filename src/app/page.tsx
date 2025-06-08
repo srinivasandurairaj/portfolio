@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import { AboutMe } from "@/components/about-me";
 import { Certifications } from "@/components/certifications/certifications";
+import { Form } from "@/components/form";
 import { Footer } from "@/components/footer";
 import { initialState } from "@/components/provider/initial-data";
 import { PersonCard } from "@/components/person-card";
@@ -40,6 +41,7 @@ const Home = () => {
         <WorkExperience />
         <Certifications />
         <Stack />
+        <Form />
         <Footer />
       </div>
     </ProfileContext.Provider>
