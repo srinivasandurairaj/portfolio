@@ -34,8 +34,13 @@ export const Form = () => {
       body: JSON.stringify(formData),
     });
 
-    const data = await response.json();
-    console.log("Response from server:", data);
+    const { status } = await response;
+    if (status === 200) {
+      alert("Email sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      alert("Failed to send email. Please try again later.");
+    }
   };
 
   return (
