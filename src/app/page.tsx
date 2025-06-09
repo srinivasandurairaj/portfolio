@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 import { AboutMe } from "@/components/about-me";
 import { Certifications } from "@/components/certifications/certifications";
@@ -16,24 +16,24 @@ import styles from "./page.module.css";
 
 const Home = () => {
   const { container } = styles;
-  const [data, setData] = useState(initialState);
+  // const [data, setData] = useState(initialState);
 
-  const fetchData = async () => {
-    const res = await fetch("/api/profile", {
-      next: {
-        revalidate: 1,
-      },
-    });
-    const data = await res.json();
-    setData(data);
-  };
+  // const fetchData = async () => {
+  //   const res = await fetch("/api/profile", {
+  //     next: {
+  //       revalidate: 1,
+  //     },
+  //   });
+  //   const data = await res.json();
+  //   setData(data);
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   return (
-    <ProfileContext.Provider value={data}>
+    <ProfileContext.Provider value={initialState}>
       <div className={container}>
         <PersonCard />
         <AboutMe />
