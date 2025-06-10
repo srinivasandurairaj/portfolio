@@ -41,7 +41,7 @@ const Home = () => {
         <WorkExperience />
         <Certifications />
         <Stack />
-        <Form />
+        {false && <Form />}
         <Footer />
       </div>
     </ProfileContext.Provider>
