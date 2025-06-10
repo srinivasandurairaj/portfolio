@@ -8,6 +8,7 @@ import styles from "./person-card.module.css";
 import { ProfileContext } from "../provider/profile-provider";
 import { Profile } from "../../utilities/constants";
 import { LinkedInIcon, LocationIcon, CopyIcon } from "../logo";
+import nextConfig from "../../../next.config";
 
 export const PersonCard = () => {
   const emailRef = useRef<HTMLParagraphElement>(null);
@@ -69,7 +70,7 @@ export const PersonCard = () => {
       <div className={personCardContainer}>
         <div>
           <NextImage
-            src={"/profile.png"}
+            src={`${nextConfig.basePath}/profile.png`}
             alt="profile-photo"
             width={150}
             height={150}

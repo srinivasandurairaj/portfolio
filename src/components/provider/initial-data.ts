@@ -1,3 +1,5 @@
+import nextConfig from "../../../next.config";
+
 export const initialState = {
   name: "Srinivasan Durairaj",
   role: "Full Stack Developer",
@@ -87,61 +89,61 @@ templates with the live APIs.`,
   stack: [
     {
       name: "NextJs",
-      image: "/nextjs.jpeg",
+      image: `${nextConfig.basePath}/nextjs.jpeg`,
       framework: "Framework for ReactJs",
       alt: "NextJs Logo",
     },
     {
       name: "ReactJs",
-      image: "/reactjs.png",
+      image: `${nextConfig.basePath}/reactjs.png`,
       framework: "Frontend Library",
       alt: "React Logo",
     },
     {
       name: "Docker",
-      image: "/docker.svg",
+      image: `${nextConfig.basePath}/docker.svg`,
       framework: "Containerization",
       alt: "React Logo",
     },
     {
       name: "GraphQL",
-      image: "/grapgql.png",
+      image: `${nextConfig.basePath}/grapgql.png`,
       framework: "Data Query Language",
       alt: "React Logo",
     },
     {
       name: "TypeScript",
-      image: "/javascript.png",
+      image: `${nextConfig.basePath}/javascript.png`,
       framework: "Scripting Language",
       alt: "TypeScript Logo",
     },
     {
       name: "JavaScript",
-      image: "/typescript.png",
+      image: `${nextConfig.basePath}/typescript.png`,
       framework: "Scripting Language",
       alt: "TypeScript Logo",
     },
     {
       name: "Node.js",
-      image: "/nodejs.png",
+      image: `${nextConfig.basePath}/nodejs.png`,
       framework: "JavaScript Runtime",
       alt: "Node.js Logo",
     },
     {
       name: "Express",
-      image: "/expressjs.png",
+      image: `${nextConfig.basePath}/expressjs.png`,
       framework: "Middleware Framework",
       alt: "Express Logo",
     },
     {
       name: "MongoDB",
-      image: "/mongodb.svg",
+      image: `${nextConfig.basePath}/mongodb.svg`,
       framework: "Framework",
       alt: "mongodb",
     },
     {
       name: "Git",
-      image: "/git.png",
+      image: `${nextConfig.basePath}/git.png`,
       framework: "Source Control",
       alt: "git",
     },

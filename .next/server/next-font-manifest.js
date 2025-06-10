@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/srinivasandurairaj/Desktop/Playarea/projects/apps/portfolio/src/app/layout":["static/media/dc4e946c2ba951cf-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
