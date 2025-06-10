@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import styles from "./form.module.css";
+import nextConfig from "../../../next.config";
 
 export const Form = () => {
   const {
@@ -26,7 +27,7 @@ export const Form = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const response = await fetch("/api/email", {
+    const response = await fetch(`${nextConfig.basePath}/api/email`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
