@@ -98,14 +98,22 @@
   letter-spacing: 1px;
 }
 
-.handles:hover {
-  color: var(--offWhite);
-  transition: all 0.3s ease-in-out;
-}
-
 .infoBox {
   display: flex;
   margin-top: 10px;
+}
+
+.infoBox > a {
+  color: var(--darkWhite);
+  margin-left: 10px;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+.handles:hover,
+.infoBox > a:hover {
+  color: var(--offWhite);
+  transition: all 0.3s ease-in-out;
 }
 
 .linekedInLink {

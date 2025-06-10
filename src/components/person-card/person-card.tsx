@@ -1,13 +1,13 @@
 "use client";
 
-import { useRef, useState, useEffect, useContext, useCallback } from "react";
+import { useRef, useContext } from "react";
 import NextImage from "next/image";
 import NextLink from "next/link";
 
 import styles from "./person-card.module.css";
 import { ProfileContext } from "../provider/profile-provider";
 import { Profile } from "../../utilities/constants";
-import { LinkedInIcon, LocationIcon, CopyIcon } from "../logo";
+import { LinkedInIcon, LocationIcon } from "../logo";
 import nextConfig from "../../../next.config";
 
 export const PersonCard = () => {
@@ -34,36 +34,10 @@ export const PersonCard = () => {
     location: baseLocation,
     workStatus,
     linkedInProfile,
-    emailAddress,
   } = useContext(ProfileContext);
-  const [copyText, setCopyText] = useState(emailAddress);
 
-  const timerToUpdateText = useCallback(
-    () =>
-      setTimeout(() => {
-        setCopyText(emailAddress);
-      }, 1000),
-    [emailAddress]
-  );
-
-  const copyHandler = () => {
-    if (emailRef.current) {
-      navigator.clipboard.writeText(emailRef.current.textContent || "");
-      setCopyText("Copied to clipboard!");
-      timerToUpdateText();
-    }
-  };
-
-  // Cleanup function to clear the timeout if the component unmounts
-  useEffect(() => {
-    return () => {
-      clearTimeout(timerToUpdateText());
-    };
-  }, [timerToUpdateText]);
-
-  useEffect(() => {
-    setCopyText(emailAddress);
-  }, [emailAddress]);
+  const contactEmail =
+    process.env.RECIPIENT_EMAIL_ADDRESS ?? "mailtosrinivasandurairaj@gmail.com";
 
   return (
     <div>
@@ -92,9 +66,11 @@ export const PersonCard = () => {
         </div>
       </div>
       <div className={handlesContainer}>
-        <div className={infoBox} ref={emailRef} onClick={copyHandler}>
-          <CopyIcon />
-          <p className={`${handles} ${noMargin}`}>{copyText}</p>
+        <div className={infoBox} ref={emailRef}>
+          ✉️
+          <a href={`mailto:${contactEmail}`} target="_blank">
+            {contactEmail}
+          </a>
         </div>
         <NextLink
           href={linkedInProfile}
