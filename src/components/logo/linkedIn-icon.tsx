@@ -1,17 +1,17 @@
-import styles from "./icon.module.css";
+import { IIconProps } from "./icon-props";
 
-export const LinkedInIcon = () => {
-  const { linkedInIcon, iconColor } = styles;
+export const LinkedInIcon = ({ iconColor }: IIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 256 256"
-      focusable="false"
-      className={`${linkedInIcon} ${iconColor}`}
+      width="14"
+      height="14"
+      viewBox="0 0 128 128"
     >
-      <g color="var(--token-66a88aa6-8fc9-447d-b229-c1bafaea57af, rgb(51, 51, 51))">
-        <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
-      </g>
+      <path
+        fill={iconColor}
+        d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+      />
     </svg>
   );
 };

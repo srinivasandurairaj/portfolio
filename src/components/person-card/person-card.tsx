@@ -1,16 +1,19 @@
 "use client";
 
-import { useRef, useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import NextImage from "next/image";
 import NextLink from "next/link";
 
 import styles from "./person-card.module.css";
 import { ProfileContext } from "../provider/profile-provider";
 import { Profile } from "../../utilities/constants";
-import { LinkedInIcon, LocationIcon } from "../logo";
+import { EmailIcon, LinkedInIcon, LocationIcon } from "../logo";
 import nextConfig from "../../../next.config";
 
 export const PersonCard = () => {
+  const contactEmail =
+    process.env.RECIPIENT_EMAIL_ADDRESS ?? "mailtosrinivasandurairaj@gmail.com";
+
   const emailRef = useRef<HTMLParagraphElement>(null);
   const {
     personCardContainer,
@@ -35,9 +38,24 @@ export const PersonCard = () => {
     workStatus,
     linkedInProfile,
   } = useContext(ProfileContext);
+  const [mailIconColor, setmailIconColor] = useState("#c9c9c9");
+  const [linkedIconColor, setLinkedInIconColor] = useState("#c9c9c9");
 
-  const contactEmail =
-    process.env.RECIPIENT_EMAIL_ADDRESS ?? "mailtosrinivasandurairaj@gmail.com";
+  const handleMouseOver = (icon: string) => {
+    if (icon === "email") {
+      setmailIconColor("#ffffff");
+    } else if (icon === "linkedin") {
+      setLinkedInIconColor("#ffffff");
+    }
+  };
+
+  const handleMouseLeave = (icon: string) => {
+    if (icon === "email") {
+      setmailIconColor("#c9c9c9");
+    } else if (icon === "linkedin") {
+      setLinkedInIconColor("#c9c9c9");
+    }
+  };
 
   return (
     <div>
@@ -66,8 +84,13 @@ export const PersonCard = () => {
         </div>
       </div>
       <div className={handlesContainer}>
-        <div className={infoBox} ref={emailRef}>
-          ✉️
+        <div
+          className={infoBox}
+          ref={emailRef}
+          onMouseLeave={() => handleMouseLeave("email")}
+          onMouseOver={() => handleMouseOver("email")}
+        >
+          <EmailIcon iconColor={mailIconColor} />
           <a href={`mailto:${contactEmail}`} target="_blank">
             {contactEmail}
           </a>
@@ -77,8 +100,12 @@ export const PersonCard = () => {
           target="_blank"
           className={linekedInLink}
         >
-          <div className={infoBox}>
-            <LinkedInIcon />
+          <div
+            className={infoBox}
+            onMouseLeave={() => handleMouseLeave("linkedin")}
+            onMouseOver={() => handleMouseOver("linkedin")}
+          >
+            <LinkedInIcon iconColor={linkedIconColor} />
             <p className={`${handles} ${noMargin}`}>{Profile.LINKEDIN}</p>
           </div>
         </NextLink>
