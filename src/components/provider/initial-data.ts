@@ -7,12 +7,12 @@ export const initialState = {
   workStatus: "Available for work",
   emailAddress: "mailtosrinivasandurairaj@gmail.com",
   linkedInProfile: "https://www.linkedin.com/in/srinivasan-durairaj-531727198/",
-  aboutMe: `Web Developer with over 8+ years of industry experience specializing in building scalable, userfocused web applications. Since 2016, I have been crafting digital experiences across a variety of platforms and frameworks. I am a self-taught, self-motivated professional with a passion for problemsolving, clean code, and intuitive design. Currently working as a Senior Developer at Apexon, I focus on delivering high-performance, maintainable front-end and full-stack solutions. I have a strong eye for usability and user experience, combining design sensibility with technical expertise to create seamless digital products. Core Skills & Technologies. React.js, Next.js, Node.js, Express.js, MongoDB, SQL, JavaScript, HTML5, CSS3, REST APIs, GraphQL, Git, Agile methodologies.`,
+  aboutMe: `Web Developer with 8+ years of industry experience specializing in building scalable, userfocused web applications. Since 2016, I have been crafting digital experiences across a variety of platforms and frameworks. I am a self-taught, self-motivated professional with a passion for problemsolving, clean code, and intuitive design. Currently working as a Senior Developer at Apexon, I focus on delivering high-performance, maintainable front-end and full-stack solutions. I have a strong eye for usability and user experience, combining design sensibility with technical expertise to create seamless digital products. Core Skills & Technologies. React.js, Next.js, Node.js, Express.js, MongoDB, SQL, JavaScript, HTML5, CSS3, REST APIs, GraphQL, Git, Agile methodologies.`,
   workExperiences: [
     {
       location: "London",
       organisation: `Goldman Sachs - Apexon's Client`,
-      role: "Senior Developer",
+      role: "Senior Developer at Apexon",
       period: "April 2022 - Present",
       project: [
         {
@@ -57,7 +57,7 @@ and fix bugs in the application.`,
     {
       location: "London",
       organisation: `Lloyds Bank - Wipro's Client`,
-      role: "Senior Software Engineer",
+      role: "Senior Software Engineer at Wipro,",
       period: "April 2019 - October 2021",
       project: [
         {
@@ -158,6 +158,5 @@ templates with the live APIs.`,
       issuer: "Cambridge University",
     },
   ],
-  footerText: `Designed with ❤️ and 🧠.`,
   footerCopyright: `© Copyright ${new Date().getFullYear()}.`,
 };
