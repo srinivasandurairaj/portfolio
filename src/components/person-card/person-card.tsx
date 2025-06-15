@@ -38,12 +38,12 @@ export const PersonCard = () => {
     workStatus,
     linkedInProfile,
   } = useContext(ProfileContext);
-  const [mailIconColor, setmailIconColor] = useState("#c9c9c9");
+  const [mailIconColor, setMailIconColor] = useState("#c9c9c9");
   const [linkedIconColor, setLinkedInIconColor] = useState("#c9c9c9");
 
   const handleMouseOver = (icon: string) => {
     if (icon === "email") {
-      setmailIconColor("#ffffff");
+      setMailIconColor("#ffffff");
     } else if (icon === "linkedin") {
       setLinkedInIconColor("#ffffff");
     }
@@ -51,7 +51,7 @@ export const PersonCard = () => {
 
   const handleMouseLeave = (icon: string) => {
     if (icon === "email") {
-      setmailIconColor("#c9c9c9");
+      setMailIconColor("#c9c9c9");
     } else if (icon === "linkedin") {
       setLinkedInIconColor("#c9c9c9");
     }

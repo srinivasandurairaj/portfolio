@@ -1,8 +1,6 @@
 import { IIconProps } from "./icon-props";
 
 export const EmailIcon = ({ iconColor }: IIconProps) => {
-  console.log("iconCOlor", iconColor);
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

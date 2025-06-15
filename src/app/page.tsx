@@ -1,7 +1,5 @@
 "use client";
 
-// import { useState, useEffect } from "react";
-
 import { AboutMe } from "@/components/about-me";
 import { Form } from "@/components/form";
 import { Footer } from "@/components/footer";
@@ -15,22 +13,6 @@ import styles from "./page.module.css";
 
 const Home = () => {
   const { container } = styles;
-  // const [data, setData] = useState(initialState);
-
-  // const fetchData = async () => {
-  //   const res = await fetch("/api/profile", {
-  //     headers: {
-  //       Accept: "application/json",
-  //       method: "GET",
-  //     },
-  //   });
-  //   const data = await res.json();
-  //   setData(data);
-  // };
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
 
   return (
     <ProfileContext.Provider value={initialState}>
