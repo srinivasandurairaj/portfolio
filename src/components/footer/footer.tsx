@@ -5,10 +5,9 @@ import styles from "./footer.module.css";
 
 export const Footer = () => {
   const { footerContainer, footerText: footerTextStyles } = styles;
-  const { footerCopyright, footerText } = useContext(ProfileContext);
+  const { footerCopyright } = useContext(ProfileContext);
   return (
     <div className={footerContainer}>
-      <p className={footerTextStyles}>{footerText}</p>
       <p className={footerTextStyles}>{footerCopyright}</p>
     </div>
   );
