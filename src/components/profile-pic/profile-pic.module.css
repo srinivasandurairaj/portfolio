@@ -1,0 +1,17 @@
+.imageContainer {
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  background-image: url("/profile.png");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.1s ease;
+  filter: grayscale(1);
+  border-radius: 15px;
+  transform-style: preserve-3d;
+}
+
+.imageContainer:hover {
+  filter: grayscale(0);
+  transform: translateZ(12px);
+}

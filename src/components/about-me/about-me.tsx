@@ -12,7 +12,7 @@ export const AboutMe = () => {
   return (
     <div className={aboutMeContainer}>
       <h2 className={aboutMeTitle}>{Profile.ABOUT_ME}</h2>
-      <p className={aboutMeDesc}>{aboutMe}</p>
+      {/* <p className={aboutMeDesc}>{aboutMe}</p> */}
     </div>
   );
 };
