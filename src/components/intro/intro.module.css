@@ -36,3 +36,21 @@
     margin-top: 40px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .introContainer {
+    flex-direction: column-reverse;
+  }
+
+  .leftContainer {
+    width: 100%;
+  }
+
+  .rightContainer {
+    width: 100%;
+  }
+
+  .polygon {
+    display: none;
+  }
+}
