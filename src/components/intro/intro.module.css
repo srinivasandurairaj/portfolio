@@ -1,6 +1,7 @@
 .introContainer {
   height: 100vh;
   display: flex;
+  flex-direction: row;
   transition: all 0.4s ease-in-out;
 }
 
@@ -16,7 +17,7 @@
 }
 
 .rightContainer {
-  background-color: brown;
+  width: 60%;
 }
 
 .polygon {
@@ -27,4 +28,22 @@
   position: absolute;
   left: 0;
   transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .introContainer {
+    flex-direction: column-reverse;
+  }
+
+  .leftContainer {
+    width: 100%;
+  }
+
+  .rightContainer {
+    width: 100%;
+  }
+
+  .polygon {
+    display: none;
+  }
 }
