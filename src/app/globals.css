@@ -1,0 +1,17 @@
+:root {
+  --bodyBackground: #121212;
+  --offWhite: #edebeb;
+  --greyWhite: #c9c9c9;
+  --darkWhite: #8a8a8a;
+  --brightGreen: #3fff0a;
+  --border: #575757;
+  --inputBackground: #242424;
+  --inputBorder: #525050;
+}
+
+body {
+  background: var(--bodyBackground);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
