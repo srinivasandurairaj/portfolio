@@ -1,11 +1,11 @@
 import { IIconProps } from "./icon-props";
 
-export const EmailIcon = ({ iconColor }: IIconProps) => {
+export const EmailIcon = ({ iconColor, size }: IIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
     >
       <path

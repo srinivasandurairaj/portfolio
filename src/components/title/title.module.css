@@ -1,0 +1,50 @@
+.titleLine1 {
+  font-size: 4.3rem;
+  margin: 0 0 0 10px;
+  color: var(--white);
+  letter-spacing: 3px;
+  line-height: 55px;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 100;
+  transition: all 0.4s ease-in-out;
+}
+
+.titleLine2 {
+  font-size: 100px;
+  margin: 0 0 0 10px;
+  color: var(--oxfordBlue);
+  letter-spacing: 15px;
+  font-family: "Roboto Flex", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 1200px) {
+  .titleLine1 {
+    font-size: 4rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .titleLine2 {
+    font-size: 90px;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .titleLine1 {
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .titleLine2 {
+    font-size: 40px;
+    transition: all 0.4s ease-in-out;
+    letter-spacing: 5px;
+  }
+}

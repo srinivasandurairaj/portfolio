@@ -1,14 +1,19 @@
 "use client";
 
-import styles from "./profile-pic.module.css";
+import NextImage from "next/image";
 
-export const ProfilePic = () => {
-  const { imageContainer } = styles;
+import { Name } from "./name";
+import { ShortIntro } from "./short-intro";
+import styles from "./profile-card.module.css";
+import { Socials } from "../socials";
+
+export const ProfileCard = () => {
+  const { cardContainer, image, innerContainer } = styles;
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (typeof window !== "undefined") {
       const card = document.querySelector(
-        '[id="imageContainer"]'
+        '[id="profileImage"]'
       ) as HTMLDivElement;
       const THRESHOLD = 15;
       const { clientX, clientY, currentTarget } = event;
@@ -27,18 +32,31 @@ export const ProfilePic = () => {
   const handleMouseLeave = (event: React.MouseEvent<HTMLDivElement>) => {
     if (typeof window !== "undefined") {
       const card = document.querySelector(
-        '[id="imageContainer"]'
+        '[id="profileImage"]'
       ) as HTMLDivElement;
       card.style.transform = `perspective(${event.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
     }
   };
 
   return (
-    <div
-      id="imageContainer"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className={imageContainer}
-    />
+    <div className={cardContainer}>
+      <div className={innerContainer}>
+        <div>
+          <NextImage
+            id="profileImage"
+            src={"./profile.png"}
+            alt="profile pic"
+            width={20}
+            height={24}
+            className={image}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+          />
+          <Name />
+        </div>
+        <ShortIntro />
+        <Socials />
+      </div>
+    </div>
   );
 };

@@ -1,10 +1,13 @@
-.container {
-  max-width: 700px;
+.pageContainer {
+  max-width: 80%;
   margin: auto;
+  transition: all 0.4s ease-in-out;
 }
 
-@media only screen and (max-width: 740px) {
-  .container {
-    padding: 0 10px;
+@media screen and (max-width: 768px) {
+  .pageContainer {
+    max-width: 100%;
+    margin: auto;
+    transition: all 0.4s ease-in-out;
   }
 }

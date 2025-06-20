@@ -1,8 +1,8 @@
-.stackContainer {
+.subHeaderContainer {
   margin-top: 80px;
 }
 
-.stackTitle {
+.subHeaderTitle {
   font-size: 3.3rem;
   margin: 0 0 0 10px;
   color: var(--white);
@@ -13,7 +13,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.stackSubTitle {
+.subHeaderSubTitle {
   font-size: 80px;
   margin: 0 0 0 10px;
   color: var(--oxfordBlue);

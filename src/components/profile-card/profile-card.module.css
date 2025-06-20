@@ -1,0 +1,91 @@
+.cardContainer {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  background-color: var(--white);
+  position: fixed;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: min-content;
+}
+
+.image {
+  object-fit: cover;
+  width: 240px;
+  height: 284px;
+  border-radius: 15px;
+  transform: translateZ(120px);
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease;
+  filter: grayscale(1);
+}
+
+.image:hover {
+  filter: grayscale(0);
+}
+
+.shortIntro {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  color: var(--chathamsBlue);
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+}
+
+.name {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 600;
+  letter-spacing: 5px;
+  transition: all 0.4s ease-in-out;
+  color: var(--ebonyClay);
+}
+
+@media screen and (max-width: 1080px) {
+  .cardContainer {
+    width: 80%;
+    position: relative;
+  }
+
+  .innerContainer {
+    width: auto;
+  }
+
+  .shortIntro {
+    font-size: larger;
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shortIntro {
+    width: 100%;
+    font-size: large;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image {
+    height: 200px;
+    object-position: top;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .shortIntro {
+    width: 100%;
+    font-size: medium;
+    transition: all 0.4s ease-in-out;
+  }
+}
