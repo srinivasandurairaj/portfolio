@@ -39,18 +39,15 @@
 
 @media screen and (max-width: 768px) {
   .introContainer {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .leftContainer {
-    width: 100%;
+    height: auto;
+    margin-top: 70px;
   }
 
   .rightContainer {
-    width: 100%;
-  }
-
-  .polygon {
-    display: none;
+    margin-top: 40px;
   }
 }

@@ -7,14 +7,12 @@ export const Intro = () => {
 
   return (
     <div className={introContainer}>
-      <div className={polygon} />
       <div className={leftContainer}>
         <ProfileCard />
       </div>
       <div className={rightContainer}>
         <AboutMe />
       </div>
-      <div className={rightContainer}></div>
     </div>
   );
 };
