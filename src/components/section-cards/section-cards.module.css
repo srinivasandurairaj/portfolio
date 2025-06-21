@@ -1,0 +1,168 @@
+.container {
+  margin: 50px 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+  transition: all 0.4s ease-in-out;
+}
+
+.container > a {
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  width: 190px;
+  height: 154px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 225px;
+  height: 190px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #124e66 0%, #d3d9d4 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #124e66 0%, #d3d9d4 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+}
+
+.card p {
+  color: var(--juniper);
+  font-weight: 400;
+  font-family: "Roboto Flex", sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 30px;
+  transition: color 0.4s ease-in-out;
+}
+
+.card:hover p {
+  color: var(--white);
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(0.87) scaleY(1.2);
+}
+
+@media screen and (max-width: 1540px) {
+  .container {
+    transition: all 0.4s ease-in-out;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .container {
+    gap: 40px;
+  }
+
+  .card {
+    width: 150px;
+    height: 154px;
+  }
+
+  .card::before {
+    width: 185px;
+    height: 190px;
+  }
+
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.03) scaleY(0.97);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .card {
+    width: 130px;
+    height: 154px;
+  }
+
+  .card::before {
+    width: 165px;
+    height: 190px;
+  }
+
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.15) scaleY(0.87);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .card {
+    width: 120px;
+    height: 154px;
+  }
+
+  .card::before {
+    width: 155px;
+    height: 190px;
+  }
+
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.23) scaleY(0.83);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 190px;
+    height: 154px;
+  }
+
+  .card::before {
+    width: 225px;
+    height: 190px;
+  }
+
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(0.87) scaleY(1.2);
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 50px;
+  }
+}

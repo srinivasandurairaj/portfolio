@@ -1,3 +1,5 @@
+"use client";
+
 import { Intro } from "@/components/intro/intro";
 
 import styles from "./page.module.css";

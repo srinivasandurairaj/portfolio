@@ -1,5 +1,3 @@
-"use client";
-
 import { AboutMe } from "../about-me";
 import { ProfileCard } from "../profile-card/profile-card";
 import styles from "./intro.module.css";

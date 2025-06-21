@@ -1,0 +1,39 @@
+.container {
+  max-width: 80%;
+  margin: auto;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+}
+
+.profileCardContainer {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skillContainer {
+  flex: 2;
+  height: auto;
+  transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .profileCardContainer {
+    height: auto;
+    flex: auto;
+    align-items: center;
+  }
+
+  .skillContainer {
+    flex: auto;
+    text-align: center;
+  }
+}

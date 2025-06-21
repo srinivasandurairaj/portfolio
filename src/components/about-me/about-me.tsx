@@ -5,7 +5,8 @@ import styles from "./about-me.module.css";
 import { ProfileDescription } from "../profile-description";
 import { Title } from "../title";
 import { Experience } from "../experience";
-import { Stack } from "../stack";
+// import { Stack } from "../stack";
+import { SectionCards } from "../section-cards";
 
 export const AboutMe = () => {
   // const { aboutMe } = useContext(ProfileContext);
@@ -16,7 +17,8 @@ export const AboutMe = () => {
       <Title />
       <ProfileDescription />
       <Experience />
-      <Stack />
+      <SectionCards />
+      {/* <Stack /> */}
     </div>
   );
 };
