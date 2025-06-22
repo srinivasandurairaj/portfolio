@@ -6,7 +6,7 @@
 
 @media screen and (max-width: 768px) {
   .pageContainer {
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
     transition: all 0.4s ease-in-out;
   }

@@ -14,7 +14,7 @@
   margin-top: 20px;
 }
 
-.skillContainer {
+.timelineContainer {
   flex: 2;
   height: auto;
   transition: all 0.4s ease-in-out;
@@ -27,7 +27,7 @@
   top: 50px;
 }
 
-.workIconBox {
+.skillButtonBox {
   position: fixed;
   right: 50px;
   top: 150px;
@@ -65,14 +65,9 @@
   height: 100%;
 }
 
-@media screen and (max-width: 1200px) {
-  .homeButtonBox {
-    right: 10px;
-  }
-
-  .workIconBox {
-    right: 10px;
-  }
+.homeButton:hover::before {
+  background-color: var(--oxfordBlue);
+  transform: translateX(0);
 }
 
 @media screen and (max-width: 1080px) {
@@ -87,7 +82,7 @@
     align-items: center;
   }
 
-  .skillContainer {
+  .timelineContainer {
     flex: auto;
     text-align: center;
   }

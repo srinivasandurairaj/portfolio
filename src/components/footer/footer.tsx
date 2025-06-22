@@ -1,3 +1,4 @@
+"use client";
 import { useContext } from "react";
 
 import { ProfileContext } from "../provider/profile-provider";

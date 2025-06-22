@@ -1,0 +1,103 @@
+.timeLineContainer {
+  margin: 100px 20px;
+  font-family: var(--fontFamily);
+  border-left: 1px solid var(--oxfordBlue);
+  padding-left: 25px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+.timeLineContainer::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-color: var(--tasman);
+  display: block;
+  rotate: 45deg;
+  position: absolute;
+  margin: -23px 0 0 -31px;
+  animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.period {
+  font-family: var(--fontFamily);
+  color: var(--white);
+  font-weight: 200;
+  margin-top: 0;
+}
+
+.role {
+  color: var(--juniper);
+  font-weight: 300;
+}
+
+.highlight {
+  background-color: var(--chathamsBlue);
+  color: var(--white);
+  padding: 5px;
+  margin: 0 5px;
+  transition: all 0.4s ease-in-out;
+}
+
+.projectDescription {
+  color: var(--tasman);
+  font-weight: 200;
+  line-height: 30px;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+  text-align: justify;
+}
+
+.projectTitle {
+  color: var(--juniper);
+  font-weight: 200;
+  line-height: 30px;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+  text-align: justify;
+  margin-top: 50px;
+}
+
+.projectDescriptionList {
+  color: var(--tasman);
+  font-weight: 200;
+  line-height: 30px;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+  text-align: justify;
+}
+
+.projectDescriptionList li {
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .roleContainer {
+    text-align: start;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .projectDescription {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeLineContainer {
+    margin-left: 10px;
+  }
+}

@@ -21,3 +21,16 @@
   font-family: "Roboto Flex", sans-serif;
   transition: all 0.4s ease-in-out;
 }
+
+@media only screen and (max-width: 600px) {
+  .subHeaderTitle {
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .subHeaderSubTitle {
+    font-size: 40px;
+    transition: all 0.4s ease-in-out;
+    letter-spacing: 5px;
+  }
+}

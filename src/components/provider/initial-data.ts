@@ -102,7 +102,7 @@ templates with the live APIs.`,
     {
       name: "Redux",
       image: `${nextConfig.basePath}/redux.png`,
-      framework: "state management",
+      framework: "State management",
       alt: "React Logo",
     },
     {
@@ -144,7 +144,7 @@ templates with the live APIs.`,
     {
       name: "MongoDB",
       image: `${nextConfig.basePath}/mongodb.svg`,
-      framework: "Framework",
+      framework: "Database",
       alt: "mongodb",
     },
     {
@@ -154,7 +154,7 @@ templates with the live APIs.`,
       alt: "git",
     },
     {
-      name: "CI CD",
+      name: "CI / CD",
       image: `${nextConfig.basePath}/cicd.jpg`,
       framework: "Source Control Pipeline",
       alt: "git",

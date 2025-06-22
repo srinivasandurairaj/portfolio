@@ -5,6 +5,7 @@
   padding: 30px 20px;
   background-color: var(--white);
   position: fixed;
+  box-sizing: border-box;
 }
 
 .innerContainer {
@@ -65,6 +66,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .cardContainer {
+    width: 100%;
+  }
   .shortIntro {
     width: 100%;
     font-size: large;
