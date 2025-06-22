@@ -1,21 +1,3 @@
-:root {
-  --bodyBackground: #121212;
-  --ebonyClay: #212a31;
-  --oxfordBlue: #2e3944;
-  --chathamsBlue: #124e66;
-  --juniper: #748d92;
-  --tasman: #d3d9d4;
-  --white: #ffffff;
-  --fontFamily: "Roboto Flex", sans-serif;
-}
-
-body {
-  background: var(--bodyBackground);
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 .navContainer {
   display: flex;
   position: absolute;

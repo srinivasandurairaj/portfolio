@@ -36,3 +36,18 @@
     margin-top: 40px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .introContainer {
+    flex-direction: column;
+  }
+
+  .leftContainer {
+    height: auto;
+    margin-top: 70px;
+  }
+
+  .rightContainer {
+    margin-top: 40px;
+  }
+}
