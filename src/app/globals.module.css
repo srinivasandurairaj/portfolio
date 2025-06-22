@@ -1,0 +1,52 @@
+:root {
+  --bodyBackground: #121212;
+  --ebonyClay: #212a31;
+  --oxfordBlue: #2e3944;
+  --chathamsBlue: #124e66;
+  --juniper: #748d92;
+  --tasman: #d3d9d4;
+  --white: #ffffff;
+  --fontFamily: "Roboto Flex", sans-serif;
+}
+
+body {
+  background: var(--bodyBackground);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.navContainer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  left: 50%;
+  right: 50%;
+  top: 30px;
+  gap: 20px;
+}
+
+.tooltip {
+  color: var(--tasman);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.homeButton,
+.workButton,
+.skillButton {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.homeButton:hover > .tooltip,
+.workButton:hover > .tooltip,
+.skillButton:hover > .tooltip {
+  opacity: 1;
+}

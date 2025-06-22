@@ -1,15 +1,12 @@
-import { Profile } from "@/utilities/constants";
 import { StackIcon } from "../stack-icon/stack-icon";
 
-import styles from "./stack.module.css";
+import { SubHeaders } from "../sub-headers";
 
 export const Stack = () => {
-  const { stackContainer, stackTitle } = styles;
-
   return (
-    <div className={stackContainer}>
-      <h2 className={stackTitle}>{Profile.STACK}</h2>
+    <>
+      <SubHeaders title="Skill" subTitle="Stack" />
       <StackIcon />
-    </div>
+    </>
   );
 };

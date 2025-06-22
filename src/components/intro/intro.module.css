@@ -1,0 +1,38 @@
+.introContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.leftContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.rightContainer {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  height: auto;
+  overflow: auto;
+  margin-top: 120px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1080px) {
+  .introContainer {
+    flex-direction: column;
+  }
+
+  .leftContainer {
+    height: auto;
+    margin-top: 70px;
+  }
+
+  .rightContainer {
+    margin-top: 40px;
+  }
+}

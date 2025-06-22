@@ -1,0 +1,24 @@
+.profileSummaryContainer {
+  margin-left: 20px;
+}
+
+.profileSummary {
+  color: var(--tasman);
+  font-family: var(--fontFamily);
+  font-weight: 200;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+.highlight {
+  background-color: var(--chathamsBlue);
+  color: var(--white);
+  padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .profileSummaryContainer {
+    margin-left: 0;
+  }
+}

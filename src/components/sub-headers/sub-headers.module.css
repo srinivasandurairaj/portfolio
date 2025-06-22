@@ -1,0 +1,36 @@
+.subHeaderContainer {
+  margin-top: 80px;
+}
+
+.subHeaderTitle {
+  font-size: 3.3rem;
+  margin: 0 0 0 10px;
+  color: var(--white);
+  letter-spacing: 5px;
+  line-height: 55px;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 100;
+  transition: all 0.4s ease-in-out;
+}
+
+.subHeaderSubTitle {
+  font-size: 80px;
+  margin: 0 0 0 10px;
+  color: var(--oxfordBlue);
+  letter-spacing: 15px;
+  font-family: "Roboto Flex", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .subHeaderTitle {
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .subHeaderSubTitle {
+    font-size: 40px;
+    transition: all 0.4s ease-in-out;
+    letter-spacing: 5px;
+  }
+}

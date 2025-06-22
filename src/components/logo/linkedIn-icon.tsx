@@ -1,11 +1,11 @@
 import { IIconProps } from "./icon-props";
 
-export const LinkedInIcon = ({ iconColor }: IIconProps) => {
+export const LinkedInIcon = ({ iconColor, size }: IIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="14"
-      height="14"
+      width={size}
+      height={size}
       viewBox="0 0 128 128"
     >
       <path
