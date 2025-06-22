@@ -7,13 +7,13 @@ export const SectionCards = () => {
 
   const cardContent = [
     {
-      title: "My Work Timelines and Projects",
-      link: "/work",
+      title: "My Skill Stack",
+      link: "/skill",
       target: "_self",
     },
     {
-      title: "My Skill Stack",
-      link: "/skill",
+      title: "My Work Timelines and Projects",
+      link: "/work",
       target: "_self",
     },
     {

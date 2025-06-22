@@ -22,7 +22,7 @@ export const ProfileSummary = () => {
         </p>
         <p className={profileSummary}>
           Currently working as a{" "}
-          <span className={highlight}>Senior Developer at Apexon</span>, I focus
+          <span className={highlight}>Senior Developer at Apexon,</span> I focus
           on delivering high-performance, maintainable front-end and full-stack
           solutions. I have a strong eye for usability and user experience,
           combining design sensibility with technical expertise to create

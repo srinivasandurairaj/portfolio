@@ -32,12 +32,12 @@ export const WorkTimeline = () => {
             high-performance, responsive, and scalable platform aligned with
             modern industry standards.
           </span>
-          Partnering with cross-functional teams—including design, product, and
+          Partnering with cross-functional teams, including design, product, and
           backend engineering. I contributed to the end-to-end architecture and
           implementation of a complete site overhaul using modern technologies
-          and industry-leading UI/UX practices, significantly improving user
+          and industry-leading UI/UX practices, significantly improving
           <span className={highlight}>
-            experience, site performance, and operational efficiency.
+            user experience, site performance, and operational efficiency.
           </span>
         </p>
       </div>
