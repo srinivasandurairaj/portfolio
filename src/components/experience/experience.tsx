@@ -1,22 +1,28 @@
+import { useContext } from "react";
+
+import { ProfileContext } from "@/components/provider/profile-provider";
+
 import styles from "./experience.module.css";
 
 export const Experience = () => {
   const { experienceContainer, year, infoDescription, infoContainer, border } =
     styles;
+
+  const { experience } = useContext(ProfileContext);
+
   return (
     <div className={experienceContainer}>
-      <div className={`${border} ${infoContainer}`}>
-        <h1 className={year}>+8</h1>
-        <p className={infoDescription}>Years of Experience</p>
-      </div>
-      <div className={`${border} ${infoContainer}`}>
-        <h1 className={year}>+6</h1>
-        <p className={infoDescription}>Completed Projects</p>
-      </div>
-      <div className={infoContainer}>
-        <h1 className={year}>Many</h1>
-        <p className={infoDescription}>Happy Clients</p>
-      </div>
+      {experience.map(({ description, quantity }, index) => (
+        <div
+          className={`${
+            index === experience.length - 1 ? "" : border
+          } ${infoContainer}`}
+          key={description}
+        >
+          <h1 className={year}>{quantity}</h1>
+          <p className={infoDescription}>{description}</p>
+        </div>
+      ))}
     </div>
   );
 };

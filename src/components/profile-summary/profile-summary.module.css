@@ -11,7 +11,7 @@
   text-align: left;
 }
 
-.highlight {
+.profileSummary > span {
   background-color: var(--chathamsBlue);
   color: var(--white);
   padding: 5px;

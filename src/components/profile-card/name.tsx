@@ -1,6 +1,12 @@
+import { useContext } from "react";
+
+import { ProfileContext } from "@/components/provider/profile-provider";
+
 import styles from "./profile-card.module.css";
 
 export const Name = () => {
-  const { name } = styles;
-  return <h1 className={name}>Srinivasan Durairaj</h1>;
+  const { name: nameStyles } = styles;
+  const { name } = useContext(ProfileContext);
+
+  return <h1 className={nameStyles}>{name}</h1>;
 };
