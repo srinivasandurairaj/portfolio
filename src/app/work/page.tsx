@@ -1,3 +1,5 @@
+"use client";
+
 import { ProfileCard } from "@/components/profile-card/profile-card";
 import { WorkTimeline } from "@/components/work-timeline/work-timeline";
 

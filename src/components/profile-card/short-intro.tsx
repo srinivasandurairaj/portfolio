@@ -1,14 +1,17 @@
+import { useContext } from "react";
+
+import { ProfileContext } from "@/components/provider/profile-provider";
+
 import styles from "./profile-card.module.css";
 
 export const ShortIntro = () => {
-  const { shortIntro } = styles;
+  const { shortIntro: shortIntroStyles } = styles;
+
+  const { shortIntro } = useContext(ProfileContext);
 
   return (
     <div>
-      <p className={shortIntro}>
-        A software engineer passionate about turning emerging technologies into
-        scalable web experiences.
-      </p>
+      <p className={shortIntroStyles}>{shortIntro}</p>
     </div>
   );
 };

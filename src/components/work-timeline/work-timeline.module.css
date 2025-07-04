@@ -40,14 +40,6 @@
   font-weight: 300;
 }
 
-.highlight {
-  background-color: var(--chathamsBlue);
-  color: var(--white);
-  padding: 5px;
-  margin: 0 5px;
-  transition: all 0.4s ease-in-out;
-}
-
 .projectDescription {
   color: var(--tasman);
   font-weight: 200;
@@ -57,13 +49,22 @@
   text-align: justify;
 }
 
+.projectDescription > span,
+.projectDescriptionList > li > span {
+  background-color: var(--chathamsBlue);
+  color: var(--white);
+  padding: 5px;
+  margin: 0 5px;
+  transition: all 0.4s ease-in-out;
+}
+
 .projectTitle {
   color: var(--juniper);
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 2px;
   transition: all 0.4s ease-in-out;
-  text-align: justify;
+  text-align: start;
   margin-top: 50px;
 }
 
@@ -87,17 +88,17 @@
   }
 
   .roleContainer {
-    text-align: start;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .projectDescription {
     text-align: justify;
+    transition: all 0.4s ease-in-out;
   }
 }
 
 @media screen and (max-width: 600px) {
   .timeLineContainer {
     margin-left: 10px;
+  }
+
+  .projectDescriptionList {
+    text-align: left;
   }
 }

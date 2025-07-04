@@ -1,15 +1,17 @@
+import { useContext } from "react";
+
+import { ProfileContext } from "@/components/provider/profile-provider";
+
 import styles from "./profile-description.module.css";
 
 export const ProfileDescription = () => {
   const { profileDescription } = styles;
 
+  const { briefIntro } = useContext(ProfileContext);
+
   return (
     <div>
-      <p className={profileDescription}>
-        I&apos;m a software engineer driven by a passion for crafting scalable
-        web applications and harnessing emerging technologies to deliver
-        innovative, high-impact solutions.
-      </p>
+      <p className={profileDescription}>{briefIntro}</p>
     </div>
   );
 };
