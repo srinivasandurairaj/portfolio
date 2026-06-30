@@ -9,7 +9,7 @@ export const initialState = {
   linkedInProfile: "https://www.linkedin.com/in/srinivasan-durairaj-531727198/",
   github: "https://github.com/srinivasandurairaj",
   briefIntro:
-    "I&apos;m a software engineer driven by a passion for crafting scalable web applications and harnessing emerging technologies to deliver innovative, high-impact solutions.",
+    "I'm a software engineer driven by a passion for crafting scalable web applications and harnessing emerging technologies to deliver innovative, high-impact solutions.",
   aboutMe: `Web Developer with 8+ years of industry experience specializing in building scalable, userfocused web applications. Since 2016, I have been crafting digital experiences across a variety of platforms and frameworks. I am a self-taught, self-motivated professional with a passion for problemsolving, clean code, and intuitive design. Currently working as a Senior Developer at Apexon, I focus on delivering high-performance, maintainable front-end and full-stack solutions. I have a strong eye for usability and user experience, combining design sensibility with technical expertise to create seamless digital products. Core Skills & Technologies. React.js, Next.js, Node.js, Express.js, MongoDB, SQL, JavaScript, HTML5, CSS3, REST APIs, GraphQL, Git, Agile methodologies.`,
   experience: [
     {
